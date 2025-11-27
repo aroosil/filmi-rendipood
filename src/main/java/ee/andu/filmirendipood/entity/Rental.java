@@ -8,14 +8,12 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Film {
+public class Rental {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private FilmType type;
-    private Integer days; // kui days on 0, siis on available , int ei ole nullable, Integer on
-
+    private double initialFee;
+    private double lateFee;
 }
